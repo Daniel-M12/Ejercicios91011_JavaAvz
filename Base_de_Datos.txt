@@ -1,0 +1,6 @@
+AlumnoCuatro: 17.5
+AlumnoUno: 15.75
+AlumnoCinco: 10.75
+Alumno Seis: 11.75
+AlumnoDos: 13.75
+Alumno Tres: 18.25
