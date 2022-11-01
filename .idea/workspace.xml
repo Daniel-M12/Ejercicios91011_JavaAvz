@@ -1,11 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5951f6b8-2e96-4334-b226-ff1bb123f344" name="Changes" comment="" />
+    <list default="true" id="5951f6b8-2e96-4334-b226-ff1bb123f344" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FuenteDeDatos/DatosEnBD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FuenteDeDatos/DatosEnFichero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modelo/Alumno.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modelo/RegistroAlumnos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Transferencia/MedioDeTransferenciaDeDatos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Base_de_Datos.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EjercicioAnterior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AntesDelRefactor/EjercicioAnterior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/notas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/FuenteDeDatos/notas.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -19,12 +41,26 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/FuenteDeDatos" />
+      <recent name="$PROJECT_DIR$/src/BDs" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="EjercicioAnterior" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="EjercicioAnterior" />
+      <option name="MAIN_CLASS_NAME" value="AntesDelRefactor.EjercicioAnterior" />
+      <module name="Ejercicios91011_JavaAvz" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Ejercicios91011_JavaAvz" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -32,6 +68,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.EjercicioAnterior" />
       </list>
     </recent_temporary>
@@ -57,5 +94,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

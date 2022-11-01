@@ -1,6 +1,6 @@
-AlumnoCuatro: 17.5
-AlumnoUno: 15.75
-AlumnoCinco: 10.75
-Alumno Seis: 11.75
-AlumnoDos: 13.75
-Alumno Tres: 18.25
+AlumnoUno: [15, 16, 14, 18] -> 15.75
+AlumnoDos: [13, 15, 17, 10] -> 13.75
+Modelo.Alumno Tres: [18, 16, 20, 19] -> 18.25
+AlumnoCuatro: [14, 19, 19, 18] -> 17.5
+AlumnoCinco: [10, 13, 11, 9] -> 10.75
+Modelo.Alumno Seis: [9, 8, 10, 20] -> 11.75

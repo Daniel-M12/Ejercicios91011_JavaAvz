@@ -1,3 +1,5 @@
+package AntesDelRefactor;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -13,7 +15,7 @@ public class EjercicioAnterior {
         String archivoEntrada = "notas.txt";
         String baseDeDatos = "Base_de_Datos.txt";
 
-        HashMap<String, ArrayList<Integer>> AlumnosConNotas = new HashMap<>(); //Alumno, notas
+        HashMap<String, ArrayList<Integer>> AlumnosConNotas = new HashMap<>(); //Modelo.Alumno, notas
         String Alumno = ".";
         ArrayList<Integer> notasPorAlumno = new ArrayList<>();
         int posicion = 1;
