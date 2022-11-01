@@ -13,3 +13,4 @@ y quiere almacenar sus promedios en su "base de datos" (Base_de_Datos.txt), sin 
 + Se transformó el código de la clase "EjercicioAnterior" ubicada en la carpeta "AntesDelRefactor" a un programa orientado a objetos.
 + Una vez con este paradigma, se aplicó el patrón de diseño *Strategy*, para que se puedan usar fuentes y destinos de datos diferentes.
 + Se creó la clase *'DatosEnBD'* para ser usada solo como ejemplo de la aplicación del patrón.
++ Finalmente, se refactorizó el método de calcular promedio en la clase *'RegistroAlumnos'* usando programación funcional.
