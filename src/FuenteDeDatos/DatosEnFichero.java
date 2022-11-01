@@ -57,7 +57,6 @@ public class DatosEnFichero implements MedioDeTransferenciaDeDatos {
                     while ((char)dato != '\n'){
                         if ((char)dato != ':'){
                             dato = archivo.read();
-                            continue;
                         }else{
                             while ((char)dato != '\n' && dato != -1){
                                 String nota = "";

@@ -1,6 +1,8 @@
 package Modelo;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.stream.Stream;
 
 public class RegistroAlumnos {
     private ArrayList<Alumno> listaAlumnos;
@@ -20,11 +22,11 @@ public class RegistroAlumnos {
     public void calcularPromedios() {
 
         for (Alumno alumno:listaAlumnos) {
-            double promedio = alumno.getPromedio();
-            for (Integer nota: alumno.getNotas()) {
-                promedio += nota;
-            }
-            alumno.setPromedio(promedio/alumno.getNotas().size());
+            Stream<Integer> notas = alumno.getNotas().stream();
+
+            Integer suma = notas.reduce(0, (x,y) -> x + y);
+
+            alumno.setPromedio((double)suma/alumno.getNotas().size());
         }
     }
 }
