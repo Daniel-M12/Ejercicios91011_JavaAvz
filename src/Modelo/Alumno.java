@@ -12,6 +12,11 @@ public class Alumno {
         notas = new ArrayList<>();
     }
 
+    public Alumno(String nombre, ArrayList<Integer> notas){
+        this.nombre = nombre;
+        this.notas = notas;
+    }
+
     public String getNombre() {
         return nombre;
     }
