@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.stream.Stream;
 
+/**
+ * Clase que modela el registro del profesor, que será llenado por el programa a partir de una fuente de datos,
+ * como un fichero de texto, una base de datos de alumnos, etc.
+ */
 public class RegistroAlumnos {
     private ArrayList<Alumno> listaAlumnos;
 

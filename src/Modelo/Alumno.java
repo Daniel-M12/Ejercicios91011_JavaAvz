@@ -2,6 +2,12 @@ package Modelo;
 
 import java.util.ArrayList;
 
+/**
+ * Clase que modela a un <i>Alumno</i>. Tiene como parámetros:
+ * - Nombre del alumno. Registrado por el profesor
+ * - Notas del alumno. Registrado por el profesor
+ * - Promedio de notas del alumno. Calculado en la clase <i>RegistroAlumnos</i>.
+ */
 public class Alumno {
     private String nombre;
     private ArrayList<Integer> notas;

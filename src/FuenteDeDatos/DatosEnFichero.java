@@ -8,10 +8,26 @@ import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
 
+/**
+ * Esta clase permite manipular ficheros para usarlos como fuentes de los datos.
+ * Implementa la interfaz <i>MedioDeTransferenciaDeDatos</i>, la cual le permite actuar acorde al patrón Strategy.
+ *
+ * Cuenta con 2 métodos públicos: <i>leerDatos</i> y <i>escbribirDatos</i>.
+ * El método <i>leerDatos</i> hace uso de 2 métodos privados para cumplir su objetivo.
+ *
+ * - Su atributo <i>almacenamientoDeDatos</i> guarda el nombre del fichero que se creará con el método <i>escribirDatos</i>.
+ * - Su atributo <i>listaAlumnos</i> almacena los alumnos leídos del fichero de origen.
+ */
 public class DatosEnFichero implements MedioDeTransferenciaDeDatos {
     private String almacenamientoDeDatos = "Base_de_Datos.txt";
     private ArrayList<Alumno> listaAlumnos = new ArrayList();
 
+    /**
+     * Método que permite obtener los nombres y notas de los alumnos registrados en el fichero pasado como parámetro.
+     *
+     * @param nombreRecurso: Nombre del fichero del que se extraerán los datos.
+     * @return array de alumnos leídos.
+     */
     @Override
     public ArrayList<Alumno> leerDatos(String nombreRecurso) {
         int posicion = 1;
@@ -26,10 +42,13 @@ public class DatosEnFichero implements MedioDeTransferenciaDeDatos {
             posicion++;
             alumno = new Alumno(leerNombreDeAlumno(nombreRecurso,posicion));
         }
-
         return listaAlumnos;
     }
 
+    /**
+     * Método que permite guardar los datos de los alumnos (nombres y promedios),
+     * guardados en su atributo <i>listaAlumnos</i>, en un nuevo fichero.
+     */
     @Override
     public void escribirDatos() {
 
@@ -46,6 +65,13 @@ public class DatosEnFichero implements MedioDeTransferenciaDeDatos {
         }
     }
 
+    /**
+     * Método privado llamado por el método <i>leerDatos</i>.
+     *
+     * @param archivoEntrada: Fichero de origen de los datos
+     * @param posicion: línea en la que se encuentra el alumno a leer. Esta se va modificando mediante un bucle en el método <i>leerDatos</i>.
+     * @return notas leídas del alumno en la línea indicada en el parámetro <i>posicion</i>.
+     */
     private static ArrayList<Integer> leerNotasDeAlumno(String archivoEntrada, int posicion) {
         ArrayList<Integer> arregloNotas = new ArrayList<>();
         int contador = 0;
@@ -92,6 +118,13 @@ public class DatosEnFichero implements MedioDeTransferenciaDeDatos {
         return arregloNotas;
     }
 
+    /**
+     * Método privado llamado por el método <i>leerDatos</i>.
+     *
+     * @param archivoEntrada: Fichero de origen de los datos
+     * @param posicion: línea en la que se encuentra el alumno a leer. Esta se va modificando mediante un bucle en el método <i>leerDatos</i>.
+     * @return nombre del alumno en la línea indicada en el parámetro <i>posicion</i>.
+     */
     private static String leerNombreDeAlumno(String archivoEntrada, int posicion) {
         String nombreAlumnoLeido = "";
         int contador = 0;

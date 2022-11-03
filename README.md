@@ -14,3 +14,6 @@ y quiere almacenar sus promedios en su "base de datos" (Base_de_Datos.txt), sin 
 + Una vez con este paradigma, se aplicó el patrón de diseño *Strategy*, para que se puedan usar fuentes y destinos de datos diferentes.
 + Se creó la clase *'DatosEnBD'* para ser usada solo como ejemplo de la aplicación del patrón.
 + Finalmente, se refactorizó el método de calcular promedio en la clase *'RegistroAlumnos'* usando programación funcional.
+
+## Ejercicio 14
++ Se agregaron comentarios explicativos y de documentación apropiados.

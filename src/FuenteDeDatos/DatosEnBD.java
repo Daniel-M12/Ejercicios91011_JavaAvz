@@ -10,9 +10,7 @@ public class DatosEnBD implements MedioDeTransferenciaDeDatos {
 
     public DatosEnBD() {
         listaAlumnos = new ArrayList<>();
-
     }
-
 
     @Override
     public ArrayList<Alumno> leerDatos(String nombreRecurso) {
