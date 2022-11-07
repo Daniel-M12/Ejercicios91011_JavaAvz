@@ -78,6 +78,7 @@ public class DatosEnFichero implements MedioDeTransferenciaDeDatos {
         try {
             InputStream archivo = DatosEnFichero.class.getResourceAsStream(archivoEntrada);
             int dato = archivo.read();
+
             while (dato != -1){
                 if (contador == posicion-1){
                     while ((char)dato != '\n'){
@@ -128,9 +129,11 @@ public class DatosEnFichero implements MedioDeTransferenciaDeDatos {
     private static String leerNombreDeAlumno(String archivoEntrada, int posicion) {
         String nombreAlumnoLeido = "";
         int contador = 0;
+
         try {
             InputStream archivo = DatosEnFichero.class.getResourceAsStream(archivoEntrada);
             int dato = archivo.read();
+
             while (dato != -1){
                 if (contador == posicion-1){
                     while ((char)dato != ':'){
@@ -155,5 +158,78 @@ public class DatosEnFichero implements MedioDeTransferenciaDeDatos {
             System.out.println("Ocurrió un error al leer nombre de alumno: " + e.getMessage());
         }
         return nombreAlumnoLeido;
+    }
+
+    private String leerCadenaEnLineaEnArchivoEntre(char inicio, char fin, String nombreArchivoALeer,int linea){
+        String cadenaLeida = "";
+        int contador = 0;
+
+        try {
+            InputStream archivo = DatosEnFichero.class.getResourceAsStream(nombreArchivoALeer);
+            int caracter = archivo.read();
+
+            while (caracter != -1){
+                if (contador == linea-1){
+                    while ((char) caracter != '\n') { //Busca el siguiente salto de línea para encontrar la fila a leer, aumentando el contador
+                        if ((char) caracter == inicio) { //Busca el carácter inicial de lectura en la línea
+                            cadenaLeida += leerCadenaEnLineaEnArchivoHasta(fin,archivo,linea);
+                            caracter = archivo.read();
+                            break;
+                        } else {
+                            caracter = archivo.read();
+                        }
+                    }
+                    break;
+                } else if (contador>linea-1){
+                    break;
+                }
+                if ((char)caracter == '\n'){
+                    contador++;
+                }
+                caracter = archivo.read();
+            }
+
+        } catch(FileNotFoundException e){
+            System.out.println(e.getMessage());
+        } catch(IOException e){
+            System.out.println(e.getMessage());
+        }
+
+        return cadenaLeida;
+    }
+
+    private String leerCadenaEnLineaEnArchivoHasta(char fin, InputStream archivoALeer,int linea){
+        String cadenaLeida = "";
+        int contador = 0;
+
+        try {
+            int caracter = archivoALeer.read();
+
+            while (caracter != -1){
+                if (contador == linea-1){
+                    while ((char) caracter != '\n') { //Busca el siguiente salto de línea para encontrar la fila a leer, aumentando el contador
+                        while ((char) caracter != fin && caracter != -1) { //Llena la cadena a leer hasta encontrar el último carácter necesario
+                            cadenaLeida += (char)caracter;
+                            caracter = archivoALeer.read();
+                        }
+                        break;
+                    }
+                    break;
+                } else if (contador>linea-1){
+                    break;
+                }
+                if ((char)caracter == '\n'){
+                    contador++;
+                }
+                caracter = archivoALeer.read();
+            }
+
+        } catch(FileNotFoundException e){
+            System.out.println(e.getMessage());
+        } catch(IOException e){
+            System.out.println(e.getMessage());
+        }
+
+        return cadenaLeida;
     }
 }
