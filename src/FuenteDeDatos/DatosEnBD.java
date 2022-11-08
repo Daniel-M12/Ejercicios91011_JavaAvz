@@ -5,20 +5,22 @@ import Transferencia.MedioDeTransferenciaDeDatos;
 import java.util.ArrayList;
 
 public class DatosEnBD implements MedioDeTransferenciaDeDatos {
+    private String nombreBD;
     //Simulando los datos en una BD
     private ArrayList<Alumno> listaAlumnos;
 
-    public DatosEnBD() {
+    public DatosEnBD(String nombreBD) {
+        this.nombreBD = nombreBD;
         listaAlumnos = new ArrayList<>();
     }
 
     @Override
-    public ArrayList<Alumno> leerDatos(String nombreRecurso) {
+    public ArrayList<Alumno> leerDatos() {
         //Generando la "BD". Este paso no es parte del método, se realizó sólo por el ejemplo de BD ficticia
         generarBD();
 
         //Ejecutando el método leerDatos, "Leyendo" los datos de la BD
-        System.out.println("Se leyeron los datos de la BD: " + nombreRecurso);
+        System.out.println("Se leyeron los datos de la BD: " + nombreBD);
 
         return listaAlumnos;
     }
@@ -55,5 +57,13 @@ public class DatosEnBD implements MedioDeTransferenciaDeDatos {
         notas3.add(14);
         notas3.add(16);
         listaAlumnos.add(new Alumno("Alumno 3", notas3));
+    }
+
+    public String getNombreBD() {
+        return nombreBD;
+    }
+
+    public void setNombreBD(String nombreBD) {
+        this.nombreBD = nombreBD;
     }
 }

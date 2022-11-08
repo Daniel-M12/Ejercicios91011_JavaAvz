@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * de las que obtener los nombres y las notas de los alumnos.
  */
 public interface MedioDeTransferenciaDeDatos {
-    ArrayList<Alumno> leerDatos(String nombreRecurso);
+    ArrayList<Alumno> leerDatos();
 
     void escribirDatos();
 }
