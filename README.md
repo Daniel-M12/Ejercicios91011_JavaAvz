@@ -17,3 +17,9 @@ y quiere almacenar sus promedios en su "base de datos" (Base_de_Datos.txt), sin 
 
 ## Ejercicio 14
 + Se agregaron comentarios explicativos y de documentación apropiados.
+
+## Ejercicio 21
++ Se realizó una limpieza del código, reemplazando el código repetido en los métodos de la clase *DatosEnFichero* mediante la creación de 3 métodos privados nuevos:
+  + *leerCadenaEnLineaEnArchivoEntre*
+  + *leerCadenaEnLineaEnArchivoHasta*
+  + *avanzarLinea*
